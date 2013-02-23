@@ -9,6 +9,8 @@ Game = function () {
 
 Game.prototype.Load = function () {
 
+    this.player = new Player();
+
     // load sound
     this.SoundJump = new buzz.sound("res/jump.ogg");
     this.SoundJump.play();
@@ -94,7 +96,7 @@ Game.prototype.Calculate = function () {
 
 
 Game.prototype.lose = function() {
-    alert("you lose");
+    GameLoopManager.stop();
 };
 
 

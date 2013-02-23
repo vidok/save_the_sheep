@@ -3,16 +3,21 @@
   <component name="ChangeListManager">
     <list default="true" id="c9dbf863-1ffa-40a4-8b6a-db991d5d8bf7" name="Default" comment="">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/lava.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/game/player.js" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/res/sheep/sheep_02.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/game.js" afterPath="$PROJECT_DIR$/game.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.js" afterPath="$PROJECT_DIR$/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="save_the_sheep.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="c9dbf863-1ffa-40a4-8b6a-db991d5d8bf7" time="1361626706502" ignored="false" />
     <file path="/sheep.js" changelist="c9dbf863-1ffa-40a4-8b6a-db991d5d8bf7" time="1361628067378" ignored="false" />
-    <file path="/game.js" changelist="c9dbf863-1ffa-40a4-8b6a-db991d5d8bf7" time="1361628780506" ignored="false" />
+    <file path="/game.js" changelist="c9dbf863-1ffa-40a4-8b6a-db991d5d8bf7" time="1361630061105" ignored="false" />
     <file path="/index.html" changelist="c9dbf863-1ffa-40a4-8b6a-db991d5d8bf7" time="1361624357536" ignored="false" />
     <file path="/board.js" changelist="c9dbf863-1ffa-40a4-8b6a-db991d5d8bf7" time="1361624389602" ignored="false" />
+    <file path="/main.js" changelist="c9dbf863-1ffa-40a4-8b6a-db991d5d8bf7" time="1361629807392" ignored="false" />
+    <file path="/player.js" changelist="c9dbf863-1ffa-40a4-8b6a-db991d5d8bf7" time="1361630042985" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,10 +46,37 @@
       <file leaf-file-name="game.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/game.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="84" column="46" selection-start="2209" selection-end="2209" vertical-scroll-proportion="0.44444445">
+            <state line="52" column="12" selection-start="1297" selection-end="1297" vertical-scroll-proportion="0.5555556">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="player.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/game/player.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="20" selection-start="178" selection-end="178" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="70" column="19" selection-start="1551" selection-end="1566" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GameLoopManager.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/auxilary/GameLoopManager.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="77" column="4" selection-start="2105" selection-end="2105" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -79,6 +111,8 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/game/board.js" />
         <option value="$PROJECT_DIR$/game/sheep.js" />
+        <option value="$PROJECT_DIR$/main.js" />
+        <option value="$PROJECT_DIR$/game/player.js" />
         <option value="$PROJECT_DIR$/game.js" />
       </list>
     </option>
@@ -384,13 +418,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="0" selection-start="479" selection-end="479" vertical-scroll-proportion="0.21825397">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/game/sheep.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="28" column="26" selection-start="567" selection-end="567" vertical-scroll-proportion="0.0">
@@ -405,9 +432,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/auxilary/GameLoopManager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="77" column="4" selection-start="2105" selection-end="2105" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="70" column="19" selection-start="1551" selection-end="1566" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game/player.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="20" selection-start="178" selection-end="178" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/game.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="84" column="46" selection-start="2209" selection-end="2209" vertical-scroll-proportion="0.44444445">
+        <state line="52" column="12" selection-start="1297" selection-end="1297" vertical-scroll-proportion="0.5555556">
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>

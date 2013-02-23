@@ -54,7 +54,7 @@ function GameTick(elapsed)
     ctx.fillText("FPS: "+ fps.str_fps,20,20);
     ctx.fillText("W: "+ canvas.width + " H: "+canvas.height,20,40);
 
- 
+
 }
 
 
