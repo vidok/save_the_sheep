@@ -30,8 +30,7 @@ Game.prototype.Load = function () {
     this.rockRightImg = new Image();
     this.rockRightImg.src = 'res/rockRight.png';
 
-    this.lavaImg = new Image();
-    this.lavaImg.src = 'res/lava.png';
+    this.lava = new Lava({x: 125, y: 475}, {dangerHeigth: canvas.height - 125});
     
     this.creaturePos = new Vec2(canvas.width / 2, canvas.height / 2);
 
@@ -44,11 +43,10 @@ Game.prototype.Load = function () {
 
     this.boardImg = new Board({x: canvas.width / 2, y: canvas.height - 200});
 
-    this.lavaHeight = canvas.height - 125;
-
     this.maxDiedSheeps = 3;
     this.currentDiedSheeps = 0;
 
+    this.savedPlace = {x: canvas.width - 125, y: canvas.height - 215};
 }
 
 Game.prototype.Calculate = function () {
@@ -70,7 +68,7 @@ Game.prototype.Calculate = function () {
         sheep.position.y = 200;
         }
 
-        if (sheep.position.y >= this.lavaHeight) {
+        if (this.lava.inLava(sheep.position.x, sheep.position.y)) {
             sheep.die();
         }
 
@@ -85,7 +83,6 @@ Game.prototype.Calculate = function () {
 
         sheep.position.y += Math.sin(sheep.counter) * 5;
         sheep.position.x += tickperframe / 10;
-        if (sheep.position.x > canvas.width) sheep.position.x = 0;
 
         sheep.counter += sheep.increase;
         sheep.sprite.update(tickperframe);
@@ -106,7 +103,7 @@ Game.prototype.Render = function () {
     ctx.drawImage(this.boardImg.img, this.boardImg.position.x, this.boardImg.position.y);
     ctx.drawImage(this.rockRightImg, 700, 300);
     ctx.drawImage(this.rockLeftImg, 0, 300);
-    ctx.drawImage(this.lavaImg, 125, 475);
+    ctx.drawImage(this.lava.img, this.lava.position.x, this.lava.position.y);
 
     for (var sheep_id in this.sheeps) {
         var sheep = this.sheeps[sheep_id];
