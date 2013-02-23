@@ -19,25 +19,32 @@ Game.prototype.Load = function () {
 
     // set up creature
     this.creatureImg = new Image();
-    this.creatureImg.src = 'res/creature.png';
+    this.creatureImg.src = 'res/sheep/sheep_01.png';
 
     this.creaturePos = new Vec2(canvas.width / 2, canvas.height / 2);
 
-    this.countSheeps = 5;
+    this.countSheeps = 2;
     this.sheeps = [];
 
     for (var i = 0; i < this.countSheeps; i++) {
-       this.sheeps[i] = new Sheep({x:canvas.width / (i + 1), y: 0});
+       this.sheeps[i] = new Sheep({x:Math.random() * 100, y: Math.random() * 100});
     }
+
+    this.counter = 0;
+    this.increase = Math.PI * 2 / 300;
+
 }
 
 Game.prototype.Calculate = function () {
-
     for (var i = 0; i < this.countSheeps; i++) {
-        this.sheeps[i].position.y += tickperframe / 10;
-        if (this.sheeps[i].position.y > canvas.height) this.sheeps[i].position.y = -100;
+        this.sheeps[i].position.y += Math.sin(this.counter) * 5;
+        this.sheeps[i].position.x += tickperframe / 10;
+        if (this.sheeps[i].position.y > canvas.height) this.sheeps[i].position.y = 0;
+        if (this.sheeps[i].position.x > canvas.width) this.sheeps[i].position.x = 0;
+
         this.sheeps[i].sprite.update(tickperframe);
     }
+    this.counter += this.increase;
 }
 
 
