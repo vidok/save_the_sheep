@@ -27,33 +27,37 @@ Game.prototype.Load = function () {
     this.sheeps = [];
 
     for (var i = 0; i < this.countSheeps; i++) {
-       this.sheeps[i] = new Sheep({x:Math.random() * 100, y: Math.random() * 100});
+       this.sheeps[i] = new Sheep({x:Math.random() * 100, y: Math.random() * 100}, 300);
     }
 
-    this.counter = 0;
-    this.increase = Math.PI * 2 / 300;
+    this.boardImg = new Board({x: canvas.width / 2, y: canvas.height - 200});
 
 }
 
 Game.prototype.Calculate = function () {
     for (var i = 0; i < this.countSheeps; i++) {
-        this.sheeps[i].position.y += Math.sin(this.counter) * 5;
-        this.sheeps[i].position.x += tickperframe / 10;
-        if (this.sheeps[i].position.y > canvas.height) this.sheeps[i].position.y = 0;
-        if (this.sheeps[i].position.x > canvas.width) this.sheeps[i].position.x = 0;
+        var sheep = this.sheeps[i];
+        sheep.position.y += Math.sin(sheep.counter) * 5;
+        sheep.position.x += tickperframe / 10;
+        if (sheep.position.y > canvas.height) sheep.position.y = 0;
+        if (sheep.position.x > canvas.width) sheep.position.x = 0;
 
-        this.sheeps[i].sprite.update(tickperframe);
+        sheep.counter += sheep.increase;
+        sheep.sprite.update(tickperframe);
     }
-    this.counter += this.increase;
+    console.log(this.boardImg.position.x);
+    ctx.drawImage(this.boardImg.img, this.boardImg.position.x, this.boardImg.position.y);
 }
 
 
 Game.prototype.Render = function () {
     
     ctx.drawImage(this.creatureImg, 0, 0, 128, 128, this.creaturePos.x, this.creaturePos.y, 128, 128);
+    ctx.drawImage(this.boardImg.img, this.boardImg.position.x, this.boardImg.position.y);
 
     for (var i = 0; i < this.countSheeps; i++) {
-        this.sheeps[i].sprite.draw(this.sheeps[i].position.x, this.sheeps[i].position.y);
+        var sheep = this.sheeps[i];
+        sheep.sprite.draw(sheep.position.x, sheep.position.y);
     }
 }
 
@@ -80,20 +84,8 @@ Game.prototype.onmouseup = function (e) {
 // keyboard input
 
 Game.prototype.onkeydown = function (e) {
-
-    // e.whitch contains charcode of pressed key
-
-    // left
-    if (e.which == 37) this.creaturePos.x -= 10;
-    // right
-    if (e.which == 39) this.creaturePos.x += 10;
-    // up
-    if (e.which == 38) this.creaturePos.y -= 10;
-    // down
-    if (e.which == 40) this.creaturePos.y += 10;
-
-    this.SoundJump.stop();
-    this.SoundJump.play();
+    if (e.keyCode == 39) this.boardImg.position.x += 100;
+    else if (e.keyCode == 37) this.boardImg.position.x -= 100;
 }
 
 Game.prototype.onkeypress = function (e) {

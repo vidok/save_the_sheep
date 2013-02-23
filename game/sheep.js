@@ -1,4 +1,8 @@
-var Sheep = function(position) {
+var Sheep = function(position, increase) {
+
+    var inc = increase || 100;
+    this.counter = 0;
+    this.increase = Math.PI * 2 / inc;
 
     this.sprite = new Sprite({
         "baseUrl"  : "res/sheep/"
