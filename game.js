@@ -70,6 +70,7 @@ Game.prototype.Calculate = function () {
         /* console.log(sheepMidY + "   " + this.boardImg.position.y); */
         // console.log(sheepMidY + '  ' + this.boardImg.position.x);
         if (onBoard){
+
             sheep.position.y -= 30;
             //  sheep.position.x -= 10;
             console.log (sheep.position.y);
@@ -77,6 +78,7 @@ Game.prototype.Calculate = function () {
 
 
         if (this.lava.inLava(sheep.position.x, sheep.position.y)) {
+            this.player.addPoints(20);
             sheep.die();
         }
         if (sheep.isDied() || sheep.isSaved()) {
@@ -85,7 +87,7 @@ Game.prototype.Calculate = function () {
             this.sheeps.push(this.sheepGenerator.createSheep());
 
             if (this.currentDiedSheeps >= this.maxDiedSheeps) {
-                this.lose();
+                this.lose(this.player.points);
             }
         }
 
@@ -98,8 +100,8 @@ Game.prototype.Calculate = function () {
 }
 
 
-Game.prototype.lose = function() {
-    GameLoopManager.stop();
+Game.prototype.lose = function(points) {
+    GameLoopManager.stop(points);
 };
 
 

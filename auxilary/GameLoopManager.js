@@ -95,8 +95,9 @@ var GameLoopManager = new function() {
 		}
 	}
 	
-	this.stop = function() {
+	this.stop = function(points) {
 		this.run(null);
+        complete(points);
 	}
 
 	this.tick = function () {

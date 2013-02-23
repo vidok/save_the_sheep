@@ -1,23 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/index.html" line="62" />
+    <bookmark url="file://$PROJECT_DIR$/index.html" line="70" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c9dbf863-1ffa-40a4-8b6a-db991d5d8bf7" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/auxilary/GameLoopManager.js" afterPath="$PROJECT_DIR$/auxilary/GameLoopManager.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/game.js" afterPath="$PROJECT_DIR$/game.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <ignored path="save_the_sheep.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="c9dbf863-1ffa-40a4-8b6a-db991d5d8bf7" time="1361642896924" ignored="false" />
     <file path="/sheep.js" changelist="c9dbf863-1ffa-40a4-8b6a-db991d5d8bf7" time="1361641879197" ignored="false" />
-    <file path="/game.js" changelist="c9dbf863-1ffa-40a4-8b6a-db991d5d8bf7" time="1361641659738" ignored="false" />
-    <file path="/index.html" changelist="c9dbf863-1ffa-40a4-8b6a-db991d5d8bf7" time="1361643348301" ignored="false" />
+    <file path="/game.js" changelist="c9dbf863-1ffa-40a4-8b6a-db991d5d8bf7" time="1361644793488" ignored="false" />
+    <file path="/index.html" changelist="c9dbf863-1ffa-40a4-8b6a-db991d5d8bf7" time="1361646214594" ignored="false" />
     <file path="/board.js" changelist="c9dbf863-1ffa-40a4-8b6a-db991d5d8bf7" time="1361624389602" ignored="false" />
     <file path="/main.js" changelist="c9dbf863-1ffa-40a4-8b6a-db991d5d8bf7" time="1361637512933" ignored="false" />
     <file path="/player.js" changelist="c9dbf863-1ffa-40a4-8b6a-db991d5d8bf7" time="1361630042985" ignored="false" />
     <file path="/lava.js" changelist="c9dbf863-1ffa-40a4-8b6a-db991d5d8bf7" time="1361640385820" ignored="false" />
     <file path="/SheepGenerator.js" changelist="c9dbf863-1ffa-40a4-8b6a-db991d5d8bf7" time="1361637192967" ignored="false" />
+    <file path="/GameLoopManager.js" changelist="c9dbf863-1ffa-40a4-8b6a-db991d5d8bf7" time="1361644496533" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +40,7 @@
       <file leaf-file-name="sheep.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/game/sheep.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="27" selection-start="658" selection-end="658" vertical-scroll-proportion="0.0">
+            <state line="37" column="27" selection-start="726" selection-end="726" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -52,10 +55,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="game.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="game.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/game.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="88" column="31" selection-start="2627" selection-end="2627" vertical-scroll-proportion="0.33730158">
+            <state line="89" column="31" selection-start="2656" selection-end="2656" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GameLoopManager.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/auxilary/GameLoopManager.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="99" column="23" selection-start="2694" selection-end="2694" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -79,11 +91,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="53" selection-start="827" selection-end="827" vertical-scroll-proportion="-4.875">
-              <folding />
+            <state line="39" column="171" selection-start="1293" selection-end="1293" vertical-scroll-proportion="0.47566065">
+              <folding>
+                <marker date="1361646241699" expanded="true" signature="1177:1266" placeholder="..." />
+                <marker date="1361646241699" expanded="true" signature="1293:1307" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -129,9 +144,10 @@
         <option value="$PROJECT_DIR$/main.js" />
         <option value="$PROJECT_DIR$/game/lava.js" />
         <option value="$PROJECT_DIR$/game/sheep.js" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/game/SheepGenerator.js" />
+        <option value="$PROJECT_DIR$/auxilary/GameLoopManager.js" />
         <option value="$PROJECT_DIR$/game.js" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -443,13 +459,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/auxilary/GameLoopManager.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="368" selection-end="763" vertical-scroll-proportion="0.15873016">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/game/player.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="20" selection-start="178" selection-end="178" vertical-scroll-proportion="0.0">
@@ -457,23 +466,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/game/lava.js">
+    <entry file="file://$PROJECT_DIR$/game/sheep.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="32" selection-start="249" selection-end="249" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="53" selection-start="827" selection-end="827" vertical-scroll-proportion="-4.875">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game/SheepGenerator.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="31" selection-start="312" selection-end="312" vertical-scroll-proportion="0.0">
+        <state line="37" column="27" selection-start="726" selection-end="726" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -485,17 +480,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/game/sheep.js">
+    <entry file="file://$PROJECT_DIR$/auxilary/GameLoopManager.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="27" selection-start="658" selection-end="658" vertical-scroll-proportion="0.0">
+        <state line="99" column="23" selection-start="2694" selection-end="2694" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game/lava.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="32" selection-start="249" selection-end="249" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game/SheepGenerator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="31" selection-start="312" selection-end="312" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/game.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="88" column="31" selection-start="2627" selection-end="2627" vertical-scroll-proportion="0.33730158">
+        <state line="89" column="31" selection-start="2656" selection-end="2656" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="171" selection-start="1293" selection-end="1293" vertical-scroll-proportion="0.47566065">
+          <folding>
+            <marker date="1361646241699" expanded="true" signature="1177:1266" placeholder="..." />
+            <marker date="1361646241699" expanded="true" signature="1293:1307" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
