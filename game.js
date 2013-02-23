@@ -39,9 +39,9 @@ Game.prototype.Load = function () {
 
     this.sheepGenerator = new SheepGenerator();
 
-    for (var i = 0; i < this.countSheeps; i++) {
+//    for (var i = 0; i < this.countSheeps; i++) {
        this.sheeps.push(this.sheepGenerator.createSheep());
-    }
+//    }
 
     this.boardImg = new Board({x: canvas.width / 2, y: canvas.height - 200});
 
@@ -55,40 +55,26 @@ Game.prototype.Calculate = function () {
     for (var sheep_id in this.sheeps) {
 
         var sheep = this.sheeps[sheep_id];
+        sheep.move();
 
-        if (sheep.position.x <120) {
-          sheep.position.x += 1;
-          sheep.position.y = 200;
-        }
-     if (sheep.position.x > 120){
-           sheep.position.y += Math.sin(sheep.counter) * 5;
-            sheep.position.x += tickperframe / 10;
-        }
 
-    if (sheep.position.x > 685){
-        sheep.position.x += 1;
-        sheep.position.y = 200;
-        }
-
+        console.log(sheep.position.x, sheep.position.y);
         if (this.lava.inLava(sheep.position.x, sheep.position.y)) {
             sheep.die();
-            this.sheeps.push(this.sheepGenerator.createSheep());
         }
-
         if (sheep.isDied() || sheep.isSaved()) {
             delete this.sheeps[sheep_id];
             this.currentDiedSheeps += 1;
+            this.sheeps.push(this.sheepGenerator.createSheep());
 
-            if (this.currentDiedSheeps >= this.maxDiedSheeps) {
-                this.lose();
-            }
+//            if (this.currentDiedSheeps >= this.maxDiedSheeps) {
+//                this.lose();
+//            }
         }
 
-        sheep.position.y += Math.sin(sheep.counter) * 5;
-        sheep.position.x += tickperframe / 10;
-
-        sheep.counter += sheep.increase;
-        sheep.sprite.update(tickperframe);
+        if (!sheep.isDied()) {
+            sheep.sprite.update(tickperframe);
+        }
     }
 
     ctx.drawImage(this.boardImg.img, this.boardImg.position.x, this.boardImg.position.y);
@@ -104,8 +90,8 @@ Game.prototype.Render = function () {
     
     ctx.drawImage(this.creatureImg, 0, 0, 128, 128, this.creaturePos.x, this.creaturePos.y, 128, 128);
     ctx.drawImage(this.boardImg.img, this.boardImg.position.x, this.boardImg.position.y);
-    ctx.drawImage(this.rockRightImg, 700, 300);
-    ctx.drawImage(this.rockLeftImg, 0, 300);
+    ctx.drawImage(this.rockRightImg, 657, 372);
+    ctx.drawImage(this.rockLeftImg, 1, 372);
     ctx.drawImage(this.lava.img, this.lava.position.x, this.lava.position.y);
 
     for (var sheep_id in this.sheeps) {

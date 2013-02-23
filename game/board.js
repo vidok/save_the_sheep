@@ -5,7 +5,7 @@ var Board = function(position) {
 
 
     this.img = new Image();
-    this.img.src = 'res/board/board.jpg';
+    this.img.src = 'res/board/board.png';
 
     return this;
 }

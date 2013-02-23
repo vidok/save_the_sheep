@@ -17,7 +17,7 @@
   <script src="game/SheepGenerator.js"></script>
 
   <style>
-    #screen { display:block; margin:0 auto; background-color:#F0F; }
+    #screen { margin:0 auto; background-color:#F0F; display: none;}
       
     .fpsmeter {
         padding: 0;
@@ -31,10 +31,35 @@
     }
 
   </style>
+
+  <script>
+      var start = function() {
+              canvas = document.getElementById("screen");
+
+              ctx = canvas.getContext("2d");
+              fps = new FPSMeter("fpsmeter", document.getElementById("fpscontainer"));
+              document.getElementById("screen").style.display = "block";
+              document.getElementById("hi-screen").style.display = "none";
+              game = new Game;
+              game.Load();
+
+              GameLoopManager.run(GameTick);
+
+              canvas.onmousedown = function (e) {      game.onmousedown(e);    };
+              canvas.onmousemove = function (e) {      game.onmousemove(e);    };
+              canvas.onmouseup = function (e) {      game.onmouseup(e);    };
+
+              document.onkeydown = function (e) {      game.onkeydown(e);    };
+              document.onkeypress = function (e) {      game.onkeypress(e);    };
+              document.onkeyup = function (e) {      game.onkeyup(e);    };
+      }
+  </script>
 </head>
 <body>
-  <canvas id='screen' width='800' height='600' "></canvas>
+  <canvas id='screen' width='800' height='600'></canvas>
   <div id="fpscontainer"></div>
-  <div></div>
+  <div id="hi-screen">
+      <a href="#" onclick="start();">Start</a>
+  </div>
 </body>
 </html>

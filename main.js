@@ -12,6 +12,7 @@ var game = null;
 
 // number of miliseconds in current frame
 var tickperframe = 0;
+var tickcount = 0;
 // number of seconds in current frame, choose what is best for your needs
 var secperframe = 0;
 
@@ -22,6 +23,7 @@ var secperframe = 0;
 
 function GameTick(elapsed)
 {
+    tickcount += 0.1;
     secperframe = elapsed;
     tickperframe = elapsed*1000;
 
@@ -57,25 +59,4 @@ function GameTick(elapsed)
 
 }
 
-
-window.onload = function () {
-
-    canvas = document.getElementById("screen");
-
-    ctx = canvas.getContext("2d");
-    fps = new FPSMeter("fpsmeter", document.getElementById("fpscontainer"));
-
-    game = new Game;
-    game.Load();
-
-    GameLoopManager.run(GameTick);
-
-    canvas.onmousedown = function (e) {      game.onmousedown(e);    };
-    canvas.onmousemove = function (e) {      game.onmousemove(e);    }; 
-    canvas.onmouseup = function (e) {      game.onmouseup(e);    }; 
- 
-    document.onkeydown = function (e) {      game.onkeydown(e);    };
-    document.onkeypress = function (e) {      game.onkeypress(e);    };
-    document.onkeyup = function (e) {      game.onkeyup(e);    };
-};
 
