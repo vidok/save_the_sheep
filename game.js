@@ -34,11 +34,13 @@ Game.prototype.Load = function () {
     
     this.creaturePos = new Vec2(canvas.width / 2, canvas.height / 2);
 
-    this.countSheeps = 5;
+    this.countSheeps = 2;
     this.sheeps = [];
 
+    this.sheepGenerator = new SheepGenerator();
+
     for (var i = 0; i < this.countSheeps; i++) {
-       this.sheeps[i] = new Sheep({x:Math.random() * 100, y: Math.random() * 100}, 300);
+       this.sheeps.push(this.sheepGenerator.createSheep());
     }
 
     this.boardImg = new Board({x: canvas.width / 2, y: canvas.height - 200});
@@ -70,6 +72,7 @@ Game.prototype.Calculate = function () {
 
         if (this.lava.inLava(sheep.position.x, sheep.position.y)) {
             sheep.die();
+            this.sheeps.push(this.sheepGenerator.createSheep());
         }
 
         if (sheep.isDied() || sheep.isSaved()) {
