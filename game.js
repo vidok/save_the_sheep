@@ -14,13 +14,20 @@ Game.prototype.Load = function () {
     this.SoundJump.play();
 
     // load ambient music and play it
-    this.SoundAmbient = new buzz.sound("res/sound.ogg");
-    this.SoundAmbient.loop().play();
+    // this.SoundAmbient = new buzz.sound("res/sound.ogg");
+    // this.SoundAmbient.loop().play();
 
     // set up creature
     this.creatureImg = new Image();
     this.creatureImg.src = 'res/sheep/sheep_01.png';
 
+
+    this.rockLeftImg = new Image();
+    this.rockLeftImg.src = 'res/rockLeft.png';
+
+    this.rockRightImg = new Image();
+    this.rockRightImg.src = 'res/rockRight.png';
+    
     this.creaturePos = new Vec2(canvas.width / 2, canvas.height / 2);
 
     this.countSheeps = 2;
@@ -54,6 +61,8 @@ Game.prototype.Render = function () {
     
     ctx.drawImage(this.creatureImg, 0, 0, 128, 128, this.creaturePos.x, this.creaturePos.y, 128, 128);
     ctx.drawImage(this.boardImg.img, this.boardImg.position.x, this.boardImg.position.y);
+    ctx.drawImage(this.rockRightImg, 700, 300);
+    ctx.drawImage(this.rockLeftImg, 0, 300);
 
     for (var i = 0; i < this.countSheeps; i++) {
         var sheep = this.sheeps[i];

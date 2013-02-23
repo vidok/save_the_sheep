@@ -33,8 +33,16 @@ function GameTick(elapsed)
     // reset transformation matrix to indentity
     ctx.setTransform(1, 0, 0, 1, 0, 0);
 
+
+    var lingrad = ctx.createLinearGradient(0,0,0,450);
+      lingrad.addColorStop(0, '#0045c3');
+      lingrad.addColorStop(0.5, '#7ca5f1');
+     
+ 
+  // assign gradients to fill and stroke styles
+  ctx.fillStyle = lingrad;
    	// Clear the screen
-	ctx.fillStyle = "cyan";
+	// ctx.fillStyle = "cyan";
 	ctx.fillRect(0, 0, canvas.width, canvas.height);
 
     // game render
