@@ -27,6 +27,9 @@ Game.prototype.Load = function () {
 
     this.rockRightImg = new Image();
     this.rockRightImg.src = 'res/rockRight.png';
+
+    this.lavaImg = new Image();
+    this.lavaImg.src = 'res/lava.png';
     
     this.creaturePos = new Vec2(canvas.width / 2, canvas.height / 2);
 
@@ -44,9 +47,22 @@ Game.prototype.Load = function () {
 Game.prototype.Calculate = function () {
     for (var i = 0; i < this.countSheeps; i++) {
         var sheep = this.sheeps[i];
-        sheep.position.y += Math.sin(sheep.counter) * 5;
-        sheep.position.x += tickperframe / 10;
-        if (sheep.position.y > canvas.height) sheep.position.y = 0;
+        if (sheep.position.x <120) {
+            sheep.position.x += 1;
+            sheep.position.y = 200;
+        }
+        if (sheep.position.x > 120){
+            sheep.position.y += Math.sin(sheep.counter) * 5;
+            sheep.position.x += tickperframe / 10;
+        }
+
+        if (sheep.position.x > 685){
+            sheep.position.x += 1;
+            sheep.position.y = 200;
+        }
+        // sheep.position.y += Math.sin(sheep.counter) * 5;
+        // sheep.position.x += tickperframe / 10;
+        // if (sheep.position.y > canvas.height) sheep.position.y = 0;
         if (sheep.position.x > canvas.width) sheep.position.x = 0;
 
         sheep.counter += sheep.increase;
@@ -63,6 +79,7 @@ Game.prototype.Render = function () {
     ctx.drawImage(this.boardImg.img, this.boardImg.position.x, this.boardImg.position.y);
     ctx.drawImage(this.rockRightImg, 700, 300);
     ctx.drawImage(this.rockLeftImg, 0, 300);
+    ctx.drawImage(this.lavaImg, 125, 475);
 
     for (var i = 0; i < this.countSheeps; i++) {
         var sheep = this.sheeps[i];
@@ -93,8 +110,16 @@ Game.prototype.onmouseup = function (e) {
 // keyboard input
 
 Game.prototype.onkeydown = function (e) {
-    if (e.keyCode == 39) this.boardImg.position.x += 100;
-    else if (e.keyCode == 37) this.boardImg.position.x -= 100;
+    if (e.keyCode == 39) {
+         if ( this.boardImg.position.x < 559 ){
+            this.boardImg.position.x += 100;
+         }
+    }
+    else if (e.keyCode == 37) {
+        if ( this.boardImg.position.x > 101 ){
+        this.boardImg.position.x -= 100;
+        }
+    }
 }
 
 Game.prototype.onkeypress = function (e) {
