@@ -1,29 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/index.html" line="60" />
+    <bookmark url="file://$PROJECT_DIR$/index.html" line="62" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c9dbf863-1ffa-40a4-8b6a-db991d5d8bf7" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/board/board.jpg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/lava.png" afterPath="$PROJECT_DIR$/res/lava.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/rockLeft.png" afterPath="$PROJECT_DIR$/res/rockLeft.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/rockRight.png" afterPath="$PROJECT_DIR$/res/rockRight.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/sheep/sheep_01.png" afterPath="$PROJECT_DIR$/res/sheep/sheep_01.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/game/SheepGenerator.js" afterPath="$PROJECT_DIR$/game/SheepGenerator.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/game/board.js" afterPath="$PROJECT_DIR$/game/board.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/game.js" afterPath="$PROJECT_DIR$/game.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.js" afterPath="$PROJECT_DIR$/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/game/sheep.js" afterPath="$PROJECT_DIR$/game/sheep.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="save_the_sheep.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="c9dbf863-1ffa-40a4-8b6a-db991d5d8bf7" time="1361626706502" ignored="false" />
+    <file path="/Dummy.txt" changelist="c9dbf863-1ffa-40a4-8b6a-db991d5d8bf7" time="1361642896924" ignored="false" />
     <file path="/sheep.js" changelist="c9dbf863-1ffa-40a4-8b6a-db991d5d8bf7" time="1361641879197" ignored="false" />
     <file path="/game.js" changelist="c9dbf863-1ffa-40a4-8b6a-db991d5d8bf7" time="1361641659738" ignored="false" />
-    <file path="/index.html" changelist="c9dbf863-1ffa-40a4-8b6a-db991d5d8bf7" time="1361633722418" ignored="false" />
+    <file path="/index.html" changelist="c9dbf863-1ffa-40a4-8b6a-db991d5d8bf7" time="1361643348301" ignored="false" />
     <file path="/board.js" changelist="c9dbf863-1ffa-40a4-8b6a-db991d5d8bf7" time="1361624389602" ignored="false" />
     <file path="/main.js" changelist="c9dbf863-1ffa-40a4-8b6a-db991d5d8bf7" time="1361637512933" ignored="false" />
     <file path="/player.js" changelist="c9dbf863-1ffa-40a4-8b6a-db991d5d8bf7" time="1361630042985" ignored="false" />
@@ -45,10 +37,10 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="sheep.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="sheep.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/game/sheep.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="104" selection-start="1198" selection-end="1198" vertical-scroll-proportion="0.78174603">
+            <state line="33" column="27" selection-start="658" selection-end="658" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -63,13 +55,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="game.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="game.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/game.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="60" column="56" selection-start="1564" selection-end="1564" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+            <state line="56" column="114" selection-start="1530" selection-end="1530" vertical-scroll-proportion="0.23809524">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -77,7 +67,7 @@
       <file leaf-file-name="SheepGenerator.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/game/SheepGenerator.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="9" selection-start="61" selection-end="61" vertical-scroll-proportion="0.0">
+            <state line="7" column="31" selection-start="312" selection-end="312" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -95,7 +85,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="80" selection-start="843" selection-end="843" vertical-scroll-proportion="-6.75">
+            <state line="23" column="53" selection-start="827" selection-end="827" vertical-scroll-proportion="-4.875">
               <folding />
             </state>
           </provider>
@@ -138,13 +128,13 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/game/player.js" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/game/board.js" />
         <option value="$PROJECT_DIR$/main.js" />
-        <option value="$PROJECT_DIR$/game/SheepGenerator.js" />
         <option value="$PROJECT_DIR$/game/lava.js" />
-        <option value="$PROJECT_DIR$/game.js" />
         <option value="$PROJECT_DIR$/game/sheep.js" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/game/SheepGenerator.js" />
+        <option value="$PROJECT_DIR$/game.js" />
       </list>
     </option>
   </component>
@@ -325,7 +315,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25225225" sideWeight="0.6700767" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25546977" sideWeight="0.6700767" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -398,6 +388,13 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/game/board.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="39" selection-start="198" selection-end="198" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="0" selection-start="479" selection-end="479" vertical-scroll-proportion="0.0">
@@ -442,13 +439,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="80" selection-start="843" selection-end="843" vertical-scroll-proportion="-6.75">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/game/board.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="39" selection-start="198" selection-end="198" vertical-scroll-proportion="0.0">
@@ -477,9 +467,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="53" selection-start="827" selection-end="827" vertical-scroll-proportion="-4.875">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/game/SheepGenerator.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="9" selection-start="61" selection-end="61" vertical-scroll-proportion="0.0">
+        <state line="7" column="31" selection-start="312" selection-end="312" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -491,18 +488,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/game.js">
+    <entry file="file://$PROJECT_DIR$/game/sheep.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="56" selection-start="1564" selection-end="1564" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+        <state line="33" column="27" selection-start="658" selection-end="658" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/game/sheep.js">
+    <entry file="file://$PROJECT_DIR$/game.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="104" selection-start="1198" selection-end="1198" vertical-scroll-proportion="0.78174603">
+        <state line="56" column="114" selection-start="1530" selection-end="1530" vertical-scroll-proportion="0.23809524">
           <folding />
         </state>
       </provider>

@@ -18,6 +18,8 @@
 
   <style>
     #screen { margin:0 auto; background-color:#F0F; display: none;}
+    #hi-screen { margin:0 auto; text-align: center;}
+    #game_over { margin:0 auto; text-align: center; display: none;}
       
     .fpsmeter {
         padding: 0;
@@ -59,7 +61,12 @@
   <canvas id='screen' width='800' height='600'></canvas>
   <div id="fpscontainer"></div>
   <div id="hi-screen">
-      <a href="#" onclick="start();">Start</a>
+      <img src="res/mainscreen.png" onclick="start();">
   </div>
+
+  <div id="game_over">
+      <img src="res/gameover.png">
+  </div>
+
 </body>
 </html>

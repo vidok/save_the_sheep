@@ -12,8 +12,9 @@ Game.prototype.Load = function () {
     this.player = new Player();
 
     // load sound
-    this.SoundJump = new buzz.sound("res/jump.ogg");
-    this.SoundJump.play();
+    this.SoundClone = new buzz.sound("res/sound/Kozel_Clone.mp3");
+    this.SoundAmbient = new buzz.sound("res/sound/BG_music.mp3");
+    this.SoundAmbient.loop().play();
 
     // load ambient music and play it
     // this.SoundAmbient = new buzz.sound("res/sound.ogg");
@@ -55,10 +56,26 @@ Game.prototype.Calculate = function () {
     for (var sheep_id in this.sheeps) {
 
         var sheep = this.sheeps[sheep_id];
+
+
         sheep.move();
 
+        var sheepMidX = sheep.position.x -55;
+        var sheepMidY = sheep.position.y -90;
+        var onBoard = sheepMidX > this.boardImg.position.x  &&
+            sheepMidX < this.boardImg.position.x + 100 &&
+            sheepMidY <  this.boardImg.position.y &&
+            sheepMidY  >  this.boardImg.position.y - 100;
 
-        console.log(sheep.position.x, sheep.position.y);
+        /* console.log(sheepMidY + "   " + this.boardImg.position.y); */
+        // console.log(sheepMidY + '  ' + this.boardImg.position.x);
+        if (onBoard){
+            sheep.position.y -= 30;
+            //  sheep.position.x -= 10;
+            console.log (sheep.position.y);
+        }
+
+
         if (this.lava.inLava(sheep.position.x, sheep.position.y)) {
             sheep.die();
         }
