@@ -34,7 +34,7 @@ Game.prototype.Load = function () {
     
     this.creaturePos = new Vec2(canvas.width / 2, canvas.height / 2);
 
-    this.countSheeps = 2;
+    this.countSheeps = 1;
     this.sheeps = [];
 
     this.sheepGenerator = new SheepGenerator();
