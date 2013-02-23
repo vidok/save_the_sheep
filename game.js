@@ -23,22 +23,21 @@ Game.prototype.Load = function () {
 
     this.creaturePos = new Vec2(canvas.width / 2, canvas.height / 2);
 
-    // set up girl
-    this.girlSpr = new Sprite({
-        "baseUrl"  : "res/girl/"
-        , "fps"    : 30
-        , "frames" : ["girl_01.png", "girl_02.png", "girl_03.png","girl_04.png"
-        , "girl_05.png", "girl_06.png", "girl_07.png", "girl_08.png" 
-        , "girl_09.png", "girl_10.png", "girl_11.png", "girl_12.png"
-        , "girl_13.png", "girl_14.png", "girl_15.png", "girl_16.png" ]
-    });
-    this.girlPos = new Vec2(0, canvas.height / 2);
+    this.countSheeps = 5;
+    this.sheeps = [];
+
+    for (var i = 0; i < this.countSheeps; i++) {
+       this.sheeps[i] = new Sheep({x:canvas.width / (i + 1), y: 0});
+    }
 }
 
 Game.prototype.Calculate = function () {
-    this.girlPos.x += tickperframe / 5;
-    if (this.girlPos.x > canvas.width) this.girlPos.x = -100;
-    this.girlSpr.update(tickperframe);
+
+    for (var i = 0; i < this.countSheeps; i++) {
+        this.sheeps[i].position.y += tickperframe / 10;
+        if (this.sheeps[i].position.y > canvas.height) this.sheeps[i].position.y = -100;
+        this.sheeps[i].sprite.update(tickperframe);
+    }
 }
 
 
@@ -46,7 +45,9 @@ Game.prototype.Render = function () {
     
     ctx.drawImage(this.creatureImg, 0, 0, 128, 128, this.creaturePos.x, this.creaturePos.y, 128, 128);
 
-    this.girlSpr.draw(this.girlPos.x, this.girlPos.y);
+    for (var i = 0; i < this.countSheeps; i++) {
+        this.sheeps[i].sprite.draw(this.sheeps[i].position.x, this.sheeps[i].position.y);
+    }
 }
 
 //---------------------------------------------
