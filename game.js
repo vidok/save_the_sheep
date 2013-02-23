@@ -30,7 +30,7 @@ Game.prototype.Load = function () {
     
     this.creaturePos = new Vec2(canvas.width / 2, canvas.height / 2);
 
-    this.countSheeps = 2;
+    this.countSheeps = 5;
     this.sheeps = [];
 
     for (var i = 0; i < this.countSheeps; i++) {
@@ -39,11 +39,31 @@ Game.prototype.Load = function () {
 
     this.boardImg = new Board({x: canvas.width / 2, y: canvas.height - 200});
 
+    this.lavaHeight = canvas.height - 125;
+
+    this.maxDiedSheeps = 3;
+    this.currentDiedSheeps = 0;
+
 }
 
 Game.prototype.Calculate = function () {
-    for (var i = 0; i < this.countSheeps; i++) {
-        var sheep = this.sheeps[i];
+    for (var sheep_id in this.sheeps) {
+
+        var sheep = this.sheeps[sheep_id];
+
+        if (sheep.position.y >= this.lavaHeight) {
+            sheep.die();
+        }
+
+        if (sheep.isDied() || sheep.isSaved()) {
+            delete this.sheeps[sheep_id];
+            this.currentDiedSheeps += 1;
+
+            if (this.currentDiedSheeps >= this.maxDiedSheeps) {
+                this.lose();
+            }
+        }
+
         sheep.position.y += Math.sin(sheep.counter) * 5;
         sheep.position.x += tickperframe / 10;
         if (sheep.position.y > canvas.height) sheep.position.y = 0;
@@ -52,9 +72,14 @@ Game.prototype.Calculate = function () {
         sheep.counter += sheep.increase;
         sheep.sprite.update(tickperframe);
     }
-    console.log(this.boardImg.position.x);
+
     ctx.drawImage(this.boardImg.img, this.boardImg.position.x, this.boardImg.position.y);
 }
+
+
+Game.prototype.lose = function() {
+    alert("you lose");
+};
 
 
 Game.prototype.Render = function () {
@@ -64,8 +89,8 @@ Game.prototype.Render = function () {
     ctx.drawImage(this.rockRightImg, 700, 300);
     ctx.drawImage(this.rockLeftImg, 0, 300);
 
-    for (var i = 0; i < this.countSheeps; i++) {
-        var sheep = this.sheeps[i];
+    for (var sheep_id in this.sheeps) {
+        var sheep = this.sheeps[sheep_id];
         sheep.sprite.draw(sheep.position.x, sheep.position.y);
     }
 }
