@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c9dbf863-1ffa-40a4-8b6a-db991d5d8bf7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/game/SheepGenerator.js" afterPath="$PROJECT_DIR$/game/SheepGenerator.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/game.js" afterPath="$PROJECT_DIR$/game.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="save_the_sheep.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -58,7 +55,7 @@
       <file leaf-file-name="game.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/game.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="114" selection-start="1530" selection-end="1530" vertical-scroll-proportion="0.23809524">
+            <state line="88" column="31" selection-start="2627" selection-end="2627" vertical-scroll-proportion="0.33730158">
               <folding />
             </state>
           </provider>
@@ -497,7 +494,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/game.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="114" selection-start="1530" selection-end="1530" vertical-scroll-proportion="0.23809524">
+        <state line="88" column="31" selection-start="2627" selection-end="2627" vertical-scroll-proportion="0.33730158">
           <folding />
         </state>
       </provider>

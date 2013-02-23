@@ -84,9 +84,9 @@ Game.prototype.Calculate = function () {
             this.currentDiedSheeps += 1;
             this.sheeps.push(this.sheepGenerator.createSheep());
 
-//            if (this.currentDiedSheeps >= this.maxDiedSheeps) {
-//                this.lose();
-//            }
+            if (this.currentDiedSheeps >= this.maxDiedSheeps) {
+                this.lose();
+            }
         }
 
         if (!sheep.isDied()) {
